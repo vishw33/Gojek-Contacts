@@ -1,5 +1,5 @@
 //
-//  ContactsModel.swift
+//  ContactDetail.swift
 //  Gojek Contacts
 //
 //  Created by Vishwas on 21/09/19.
@@ -8,24 +8,25 @@
 
 import Foundation
 
-struct ContactsModel: Codable,Comparable {
-    
+
+struct DetailContact: Codable {
+
     
     let id: Int?
-    let firstName, lastName: String?
+    let firstName, lastName, email, phoneNumber: String?
     let profilePic: String?
     let favorite: Bool?
-    let url: String?
+    let createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"
         case lastName = "last_name"
+        case email
+        case phoneNumber = "phone_number"
         case profilePic = "profile_pic"
-        case favorite, url
-    }
-    
-    static func < (lhs: ContactsModel, rhs: ContactsModel) -> Bool {
-        return lhs.firstName! < rhs.firstName!
+        case favorite
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
     }
 }

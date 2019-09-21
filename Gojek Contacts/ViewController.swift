@@ -9,16 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var model:[ContactsModel] = [ContactsModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        API.shared.getContacts(with: SessionAPIRequest.FetchContact) { (model, err) in
-            print(model.count)
+       
+        fetch()
+        API.shared.getDetails(with: SessionAPIRequest.FetchContactDetail(id: "11081")) { (details, err) in
+            print(details.firstName)
         }
+        
+        API.shared.deleteContact(with: SessionAPIRequest.DeleteContact(id: "11081")) { (str, val) in
+            DispatchQueue.main.async {
+                print(str,val)
+                self.fetch()
+            }
         }
-    
-        // Do any additional setup after loading the view.
+            
+        
+        
     }
+    
+    func fetch () {
+       
+    }
+    
+    
+    // Do any additional setup after loading the view.
+}
 
 
 

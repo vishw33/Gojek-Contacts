@@ -44,7 +44,7 @@ enum SessionAPIRequest:URLRequestGetter {
         case .FetchContact,.AddNewContact:
             return "contacts.json"
         case .FetchContactDetail(let id) , .UpdateContact(let id , _) , .DeleteContact(let id):
-            return "\(id).json"
+            return "contacts/\(id).json"
         }
     }
     

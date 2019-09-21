@@ -7,8 +7,10 @@
 //
 
 import Foundation
-typealias ServiceResponse = ([ContactsModel], NSError?) -> Void
-
+typealias contactResponse = ([ContactsModel], NSError?) -> Void
+typealias detailResponse = (DetailContact, NSError?) -> Void
+typealias deleteResponse = (Bool, Int) -> Void
+typealias completionResponse = (Bool) -> Void
 
 class API:NSObject {    
     static let shared : API = {
