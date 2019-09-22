@@ -93,6 +93,7 @@ extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
         let model:ContactsModel =  groupedContacts[keysSorted[indexPath.section]]![indexPath.row]
         cell.nameLabel.text = model.firstName ?? ""
+        cell.selectionStyle = .none
         cell.favImage.isHidden =  !(model.favorite ?? false)
         cell.profileImage?.image = placeHolderImg
         let url:String = model.profilePic == "/images/missing.png" ? baseMissingURl : model.profilePic!
@@ -124,8 +125,13 @@ extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //ContactDetailViewController
-        let model:ContactsModel =  groupedContacts[keysSorted[indexPath.section]]![indexPath.row]
+        let model:ContactsModel? =  groupedContacts[keysSorted[indexPath.section]]?[indexPath.row]
+        guard let pickedModel = model?.id else {
+            return
+        }
+        let id:String = "\(pickedModel)"
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContactDetailViewController") as! ContactDetailViewController
+        vc.contactId = id
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
