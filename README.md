@@ -1,7 +1,7 @@
 # Gojek-Contacts
 Interview Code
 
-Hi I have updated the code for Review Kindly Go through it
+Hi I have updated the code for Review Kindly Go through this file for details
 
 ## Few Details
 
@@ -48,5 +48,21 @@ Hi I have updated the code for Review Kindly Go through it
 ## Light Mode Screens
 
 ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Main%20Screen.png) ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Detail%20Screen.png) ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Add%20Screen.png).   ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Edit%20Screen.png)
+
+## My Profile
+
+[LinkedIn Profile](https://www.linkedin.com/in/vishwas-yadav-33522369).
+
+## My Medium Articles
+
+[Mobile Development Non Functional Requirement](https://medium.com/@vishwasng/non-functional-requirement-of-the-mobile-development-system-e0ed98f2a872).
+
+[Swift Higher Order Functions](https://medium.com/@vishwasng/swift-higher-order-function-and-its-uses-d363eb5cc635).
+
+[Constrained Extension in Swift with Arrays](https://medium.com/@vishwasng/constrained-extension-in-swift-with-arrays-5000c5678b19).
+
+[Biometric Authentication in iOS](https://medium.com/@vishwasng/bibiometric-authentication-in-ios-36f51a65b39b).
+
+
 
 
