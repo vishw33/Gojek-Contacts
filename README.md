@@ -44,3 +44,9 @@ Hi I have updated the code for Review Kindly Go through it
   ## Dark Mode Screens
   
   ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Dark%20Mode/Main%20Screen.png) ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Dark%20Mode/Detail%20Screen.png) ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Dark%20Mode/Add%20Screen.png).   ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Dark%20Mode/Edit%20Screen.png)
+  
+## Light Mode Screens
+
+![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Main%20Screen.png) ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Detail%20Screen.png) ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Add%20Screen.png).   ![alt text](https://github.com/vishw33/Gojek-Contacts/blob/master/Gojek%20Contacts/Images/Light%20Mode/Edit%20Screen.png)
+
+
