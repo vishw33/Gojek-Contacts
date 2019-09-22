@@ -65,4 +65,17 @@ extension API {
                dataTask.resume()
         
     }
+    
+    func saveContact(with updateUrlRequest:URLRequestGetter ,onCompletion: @escaping completionResponse)  {
+        let myUrlRequest =  updateUrlRequest.asURLRequest()
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: myUrlRequest  , completionHandler: { (data, response, error) -> Void in
+                   guard let dataResponse = response as? HTTPURLResponse,
+                       error == nil else {
+                           print(error?.localizedDescription ?? "Response Error")
+                           return }
+                    onCompletion((200...299).contains(dataResponse.statusCode))
+               })
+               dataTask.resume()
+    }
 }

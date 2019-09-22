@@ -17,12 +17,18 @@ class ContactsViewController: UIViewController {
     let activity = UIActivityIndicatorView(style: .large)
     var groupedContacts = [String: [ContactsModel]]()
     var keysSorted = [String]()
+    var baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpActivity()
         self.title = "Contacts"
+        if self.traitCollection.userInterfaceStyle == .dark {
+            baseMissingURl = ""
+        } else {
+           baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
+        }
         contactTableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
         activity.startAnimating()
         fetchContacts()
@@ -89,13 +95,15 @@ extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
         cell.nameLabel.text = model.firstName ?? ""
         cell.favImage.isHidden =  !(model.favorite ?? false)
         cell.profileImage?.image = placeHolderImg
+        let url:String = model.profilePic == "/images/missing.png" ? baseMissingURl : model.profilePic!
+        cell.profileImage.downloadImageFrom(link: url, contentMode: .scaleAspectFit)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let model:ContactsModel = self.modelArray[indexPath.row]
@@ -112,5 +120,12 @@ extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
                 }
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //ContactDetailViewController
+        let model:ContactsModel =  groupedContacts[keysSorted[indexPath.section]]![indexPath.row]
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContactDetailViewController") as! ContactDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

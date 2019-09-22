@@ -12,7 +12,7 @@ public protocol URLRequestGetter {
     func asURLRequest() -> URLRequest
 }
 
-public typealias Parameters = Dictionary<String, String>
+public typealias Parameters = Dictionary<String, Any>
 var baseURL:String = "https://gojek-contacts-app.herokuapp.com"
 public typealias HTTPHeaders = [String: String]
 

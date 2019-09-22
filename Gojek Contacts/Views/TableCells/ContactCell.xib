@@ -38,11 +38,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="NbE-ze-zYw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0DE-YO-cWU"/>
-                    <constraint firstItem="ghp-Ea-Xrh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="7lg-dL-uOF"/>
+                    <constraint firstItem="ghp-Ea-Xrh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="7lg-dL-uOF"/>
                     <constraint firstItem="g0j-JA-hGF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8X9-gt-KkM"/>
                     <constraint firstAttribute="trailing" secondItem="g0j-JA-hGF" secondAttribute="trailing" constant="32" id="BU6-hG-4Ou"/>
                     <constraint firstAttribute="bottom" secondItem="NbE-ze-zYw" secondAttribute="bottom" constant="12" id="OhV-sg-qXw"/>
-                    <constraint firstAttribute="bottom" secondItem="ghp-Ea-Xrh" secondAttribute="bottom" constant="24" id="fOH-47-zGF"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ghp-Ea-Xrh" secondAttribute="bottom" constant="24" id="fOH-47-zGF"/>
                     <constraint firstAttribute="trailing" secondItem="ghp-Ea-Xrh" secondAttribute="trailing" constant="60" id="fmf-6F-LcG"/>
                     <constraint firstItem="ghp-Ea-Xrh" firstAttribute="leading" secondItem="NbE-ze-zYw" secondAttribute="trailing" constant="12" id="hfh-cU-fF6"/>
                     <constraint firstItem="NbE-ze-zYw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="u3I-u8-Ryr"/>

@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D1EB0353-DCA8-4123-BDC4-E943FD5966D2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gojek Contacts/SessionClass/SessionCalls.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getContacts(with:onCompletion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3C2233AF-D1C7-4678-BCCC-AA12EBB32A26"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -71,38 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B6906E3D-ADE7-4CBA-A3B2-608439EA9334"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gojek Contacts/SessionClass/SessionCalls.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "getDetails(with:onCompletion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "55637175-AC79-49CD-B3CC-167E22B7AE27"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gojek Contacts/SessionClass/SessionCalls.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "getDetails(with:onCompletion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4DDEC1AD-54F7-4729-9AD4-0CC66D2BA9F1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -110,8 +62,8 @@
             filePath = "Gojek Contacts/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -148,21 +100,6 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "35C99C0E-E807-403A-B7A1-C5751505FB52 - aa249322cd17bc1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Gojek_Contacts.DetailContact.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Gojek_Contacts.DetailContact.CodingKeys&gt;"
-                  moduleName = "Gojek Contacts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vishwas/Documents/Gojek%20Contacts/Gojek%20Contacts/Models/ContactDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "67">
-               </Location>
-               <Location
                   uuid = "35C99C0E-E807-403A-B7A1-C5751505FB52 - 569bb5bcaa2ce174"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -176,6 +113,21 @@
                   startingLineNumber = "23"
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "35C99C0E-E807-403A-B7A1-C5751505FB52 - aa249322cd17bc1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gojek_Contacts.DetailContact.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Gojek_Contacts.DetailContact.CodingKeys&gt;"
+                  moduleName = "Gojek Contacts"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vishwas/Documents/Gojek%20Contacts/Gojek%20Contacts/Models/ContactDetail.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "67">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -206,8 +158,8 @@
             filePath = "Gojek Contacts/Controllers/ContactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
             <Locations>
@@ -222,8 +174,8 @@
                   urlString = "file:///Users/vishwas/Documents/Gojek%20Contacts/Gojek%20Contacts/Controllers/ContactsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
                   offsetFromSymbolStart = "298">
                </Location>
                <Location
@@ -237,9 +189,9 @@
                   urlString = "file:///Users/vishwas/Documents/Gojek%20Contacts/Gojek%20Contacts/Controllers/ContactsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "133">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "139">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -254,9 +206,41 @@
             filePath = "Gojek Contacts/Controllers/ContactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "groupContacts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF7E0FBE-299E-40FA-8200-03C1E2E845F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gojek Contacts/Extensions/Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "downloadImageFrom(link:contentMode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E04C9598-1773-435C-BBD9-AC3E7D0BD07E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gojek Contacts/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

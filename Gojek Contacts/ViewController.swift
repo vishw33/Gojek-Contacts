@@ -14,28 +14,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        fetch()
-        API.shared.getDetails(with: SessionAPIRequest.FetchContactDetail(id: "11081")) { (details, err) in
-            print(details.firstName)
+        /*API.shared.getDetails(with: SessionAPIRequest.FetchContactDetail(id: "11081")) { (details, err) in
         }
         
         API.shared.deleteContact(with: SessionAPIRequest.DeleteContact(id: "11081")) { (str, val) in
             DispatchQueue.main.async {
                 print(str,val)
-                self.fetch()
             }
-        }
-            
+         
+         {
+           "first_name": "Amitabh",
+           "last_name": "Bachchan",
+           "email": "ab@bachchan.com",
+           "phone_number": "+919980123412",
+           "favorite": false
+         }
+        }*/
         
+        var dict = Dictionary<String, Any>()
+        dict["first_name"] = "Vishwas"
+        dict["last_name"] = "ng"
+        dict["email"] = "vishw33@gmail.com"
+        dict["phone_number"] = "8867976701"
+        dict["favorite"] = true
+        
+        API.shared.saveContact(with: SessionAPIRequest.AddNewContact(parameter: dict)) { (issaved) in
+            if issaved {
+                print("i am awsome")
+            }
+         }
         
     }
-    
-    func fetch () {
-       
-    }
-    
-    
-    // Do any additional setup after loading the view.
 }
 
 
