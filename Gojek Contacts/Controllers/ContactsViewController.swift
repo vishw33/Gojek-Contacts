@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ContactProtocal {
+    func Update()
+}
+
 class ContactsViewController: UIViewController {
     
     @IBOutlet weak var contactTableView: UITableView!
@@ -30,8 +34,18 @@ class ContactsViewController: UIViewController {
            baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
         }
         contactTableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
-        activity.startAnimating()
         fetchContacts()
+        
+        let addBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addAction))
+        self.navigationItem.rightBarButtonItem  = addBarButtonItem
+    }
+    
+    @objc func addAction(){
+         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NewContactViewController") as! NewContactViewController
+        vc.mode = .New
+        vc.delegate = self
+        let presentNav = UINavigationController(rootViewController: vc)
+        self.navigationController?.present(presentNav, animated: true, completion: nil)
     }
     
     func setUpActivity()  {
@@ -40,6 +54,7 @@ class ContactsViewController: UIViewController {
     }
     
     func fetchContacts() {
+        activity.startAnimating()
         contactList.shared.getUpdatedContact { (isComplete) in
             if isComplete {
                 self.modelArray = contactList.shared.contactListCollection
@@ -49,6 +64,8 @@ class ContactsViewController: UIViewController {
                     self.contactTableView.reloadData()
                     self.activity.stopAnimating()
                 }
+            } else {
+                self.showErrorAlert(message: "Something is wrong please Try After Sometime")
             }
         }
     }
@@ -133,5 +150,11 @@ extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContactDetailViewController") as! ContactDetailViewController
         vc.contactId = id
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension ContactsViewController:ContactProtocal {
+    func Update() {
+        fetchContacts()
     }
 }

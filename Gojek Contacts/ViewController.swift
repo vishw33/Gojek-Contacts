@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         dict["phone_number"] = "8867976701"
         dict["favorite"] = true
         
-        API.shared.saveContact(with: SessionAPIRequest.AddNewContact(parameter: dict)) { (issaved) in
+        API.shared.saveContact(with: SessionAPIRequest.AddNewContact(parameter: dict)) { (issaved,val)  in
             if issaved {
                 print("i am awsome")
             }

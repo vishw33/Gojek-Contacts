@@ -24,6 +24,15 @@ extension Dictionary {
     }
 }
 
+extension UIView {
+    func setGradient() {
+         let gradient: CAGradientLayer = CAGradientLayer()
+         gradient.colors = [UIColor(white: 1, alpha: 0.9), UIColor(red: 53/255.0, green: 255/255.0, blue: 250/255.0, alpha: 1).cgColor]
+         gradient.frame = self.layer.frame
+         self.layer.insertSublayer(gradient, at: 0)
+     }
+}
+
 extension UIImageView {
    func setRounded() {
     let radius = self.frame.width / 2
@@ -41,5 +50,27 @@ extension UIImageView {
                 }
                }
            }).resume()
+       }
+}
+
+extension UIViewController {
+    func showAlert(message:String) {
+        let  alert = UIAlertController.init(title: nil,
+                                            message: message,
+                                            preferredStyle: .alert)
+   
+        alert.addAction(UIAlertAction.init(title: "OK",
+                                           style: .cancel, handler: {_ in self .dismiss(animated: true, completion: nil)}))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showErrorAlert(message:String) {
+           let  alert = UIAlertController.init(title: "Go-Jek",
+                                               message: message,
+                                               preferredStyle: .alert)
+      
+           alert.addAction(UIAlertAction.init(title: "OK",
+                                              style: .cancel, handler: {_ in  alert.dismiss(animated: true, completion: nil)}))
+           self.present(alert, animated: true, completion: nil)
        }
 }

@@ -19,6 +19,8 @@ class ContactDetailViewController: UIViewController {
     var baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
     let placeHolderImg = UIImage(named: "placeholder_photo")
     
+    let activity = UIActivityIndicatorView(style: .large)
+    
     var infoArray = ["Mobile" , "email"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +29,45 @@ class ContactDetailViewController: UIViewController {
         } else {
             baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
         }
+        let editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editAction))
+        self.navigationItem.rightBarButtonItem  = editBarButtonItem
         detailTable.alwaysBounceVertical = false
         detailTable.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchDetail()
     }
     
+    @objc func editAction(){
+         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NewContactViewController") as! NewContactViewController
+        vc.mode = .Edit
+        vc.detailModel = detailModel
+        vc.delegate = self
+        let presentNav = UINavigationController(rootViewController: vc)
+        self.navigationController?.present(presentNav, animated: true, completion: nil)
+        
+    }
+    
+    func setUpActivity()  {
+           activity.center = self.view.center
+           self.view.addSubview(activity)
+       }
+    
     func fetchDetail(){
+        activity.startAnimating()
         API.shared.getDetails(with: SessionAPIRequest.FetchContactDetail(id: contactId)) { (detail, err) in
-            self.detailModel = detail
-            DispatchQueue.main.async {
-                self.setupView()
+            if err == nil {
+                DispatchQueue.main.async {
+                               self.detailModel = detail
+                               self.setupView()
+                               self.activity.stopAnimating()
+                           }
+            }else {
+                self.showErrorAlert(message: "Please Try After Sometime")
             }
+           
         }
     }
     
@@ -54,16 +84,8 @@ class ContactDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setGradient()
+        self.headerView.setGradient()
     }
-    
-    func setGradient() {
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.colors = [UIColor(white: 1, alpha: 0.9), UIColor(red: 53/255.0, green: 255/255.0, blue: 250/255.0, alpha: 1).cgColor]
-        gradient.frame = self.headerView.layer.frame
-        self.headerView.layer.insertSublayer(gradient, at: 0)
-    }
-    
 }
 
 extension ContactDetailViewController:UITableViewDelegate,UITableViewDataSource {
@@ -91,6 +113,10 @@ extension ContactDetailViewController:UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 56
     }
-    
-    
+}
+
+extension ContactDetailViewController:ContactProtocal{
+    func Update() {
+        fetchDetail()
+    }
 }

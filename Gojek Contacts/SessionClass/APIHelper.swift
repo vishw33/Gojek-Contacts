@@ -11,6 +11,7 @@ typealias contactResponse = ([ContactsModel], NSError?) -> Void
 typealias detailResponse = (DetailContact, NSError?) -> Void
 typealias deleteResponse = (Bool, Int) -> Void
 typealias completionResponse = (Bool) -> Void
+typealias saveResponse = (Bool, String) -> Void
 
 class API:NSObject {    
     static let shared : API = {

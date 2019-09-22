@@ -66,7 +66,7 @@ extension API {
         
     }
     
-    func saveContact(with updateUrlRequest:URLRequestGetter ,onCompletion: @escaping completionResponse)  {
+    func saveContact(with updateUrlRequest:URLRequestGetter ,onCompletion: @escaping saveResponse)  {
         let myUrlRequest =  updateUrlRequest.asURLRequest()
         let session = URLSession.shared
         let dataTask = session.dataTask(with: myUrlRequest  , completionHandler: { (data, response, error) -> Void in
@@ -74,8 +74,21 @@ extension API {
                        error == nil else {
                            print(error?.localizedDescription ?? "Response Error")
                            return }
-                    onCompletion((200...299).contains(dataResponse.statusCode))
+            onCompletion((200...299).contains(dataResponse.statusCode),error?.localizedDescription ?? "Some Error")
                })
                dataTask.resume()
+    }
+    
+    func updateContact(with updateUrlRequest:URLRequestGetter ,onCompletion: @escaping saveResponse )  {
+        let myUrlRequest =  updateUrlRequest.asURLRequest()
+               let session = URLSession.shared
+               let dataTask = session.dataTask(with: myUrlRequest  , completionHandler: { (data, response, error) -> Void in
+                          guard let dataResponse = response as? HTTPURLResponse,
+                              error == nil else {
+                                  print(error?.localizedDescription ?? "Response Error")
+                                  return }
+                onCompletion((200...299).contains(dataResponse.statusCode),error?.localizedDescription ?? "Some Error")
+                      })
+                      dataTask.resume()
     }
 }
