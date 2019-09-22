@@ -227,22 +227,6 @@
             </objects>
             <point key="canvasLocation" x="4034.4000000000001" y="-426.83658170914543"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="Nz7-Kj-kGL">
-            <objects>
-                <viewController id="zse-5b-SbF" customClass="ViewController" customModule="Gojek_Contacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wPO-ZM-Nmq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="m5t-YK-9FC"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="vzg-hc-0dc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eFV-7z-gfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="803" y="369"/>
-        </scene>
         <!--Contacts-->
         <scene sceneID="gSZ-Iq-rRA">
             <objects>
