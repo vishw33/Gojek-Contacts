@@ -14,6 +14,7 @@ enum ViewMode {
 
 class NewContactViewController: UIViewController {
     
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var detailTable: UITableView!
     @IBOutlet weak var headerView: UIView!
@@ -30,8 +31,7 @@ class NewContactViewController: UIViewController {
     
     var detailModel:DetailContact?
     var mode:ViewMode = .New
-    var baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
-    let placeHolderImg = UIImage(named: "placeholder_photo")
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,15 +62,23 @@ class NewContactViewController: UIViewController {
     }
     
     
+    @IBAction func cameraButtonAction(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    
     @objc func doneAction(){
         self.view.endEditing(true)
         
         if fname.count > 0{
-            if !(phone.count > 10){
+            if !(phone.count >= 10){
                 ShowErr(str: "Enter Valid phone Number")
                 return
             }
-            
         }else {
             ShowErr(str: "Enter First Name")
             return
@@ -122,14 +130,17 @@ class NewContactViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         headerView.setGradient()
+        profileImage.setRounded()
         self.originalViewRect = self.view.frame
         if (mode == .Edit) {
             setupView()
             self.title = "Edit Contact"
             self.nameLabel.isHidden = false
+            self.cameraButton.isHidden = true
         }else {
             self.title = "New Contact"
             self.nameLabel.isHidden = true
+            self.cameraButton.isHidden = false
         }
         
     }
@@ -226,6 +237,20 @@ extension NewContactViewController:UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+extension NewContactViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+           if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+               profileImage.contentMode = .scaleAspectFit
+               profileImage.image = pickedImage
+           }
+           dismiss(animated: true, completion: nil)
+       }
+       
+       func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+           dismiss(animated: true, completion: nil)
+       }
 }
 
 

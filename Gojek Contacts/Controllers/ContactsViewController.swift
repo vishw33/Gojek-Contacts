@@ -17,11 +17,9 @@ class ContactsViewController: UIViewController {
     @IBOutlet weak var contactTableView: UITableView!
     var modelArray = [ContactsModel]()
     let favImage = UIImage(named: "home_favourite")
-    let placeHolderImg = UIImage(named: "placeholder_photo")
     let activity = UIActivityIndicatorView(style: .large)
     var groupedContacts = [String: [ContactsModel]]()
     var keysSorted = [String]()
-    var baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
     
     
     override func viewDidLoad() {

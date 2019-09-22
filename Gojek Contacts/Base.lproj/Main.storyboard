@@ -360,17 +360,30 @@
                                             <constraint firstAttribute="trailing" secondItem="44i-zO-Zhf" secondAttribute="trailing" constant="7" id="l8Z-2v-Sfw"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-2i-LZ4">
+                                        <rect key="frame" x="219" y="145" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="Aaf-Rd-XSU"/>
+                                            <constraint firstAttribute="width" constant="41" id="Gg2-3O-FF1"/>
+                                        </constraints>
+                                        <state key="normal" image="camera_button"/>
+                                        <connections>
+                                            <action selector="cameraButtonAction:" destination="HBq-G2-uFP" eventType="touchUpInside" id="aVx-KI-5wf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="lQq-HC-wdn" firstAttribute="leading" secondItem="UEF-cT-TEO" secondAttribute="leading" constant="8" id="9nI-ty-YeJ"/>
                                     <constraint firstItem="iFl-GL-KvW" firstAttribute="top" secondItem="UEF-cT-TEO" secondAttribute="top" constant="60" id="T6V-7L-hUA"/>
+                                    <constraint firstItem="N3g-2i-LZ4" firstAttribute="leading" secondItem="iFl-GL-KvW" secondAttribute="trailing" constant="-28.5" id="bR2-bs-wy7"/>
                                     <constraint firstAttribute="trailing" secondItem="lQq-HC-wdn" secondAttribute="trailing" constant="8" id="fgT-bL-ZnR"/>
                                     <constraint firstItem="iFl-GL-KvW" firstAttribute="centerX" secondItem="UEF-cT-TEO" secondAttribute="centerX" id="hAa-aV-AmL"/>
                                     <constraint firstItem="xrK-Za-wAe" firstAttribute="top" secondItem="iFl-GL-KvW" secondAttribute="bottom" constant="8" id="hRd-11-kAQ"/>
                                     <constraint firstAttribute="height" constant="350" id="mEj-Jj-1XF"/>
                                     <constraint firstAttribute="bottom" secondItem="lQq-HC-wdn" secondAttribute="bottom" constant="8" id="mW8-a4-pH2"/>
                                     <constraint firstItem="xrK-Za-wAe" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UEF-cT-TEO" secondAttribute="leading" constant="30" id="sDQ-G2-cvb"/>
+                                    <constraint firstItem="N3g-2i-LZ4" firstAttribute="top" secondItem="iFl-GL-KvW" secondAttribute="bottom" constant="-35" id="wPZ-mC-KVg"/>
                                     <constraint firstAttribute="trailing" secondItem="xrK-Za-wAe" secondAttribute="trailing" constant="30" id="xTg-iE-ZeE"/>
                                 </constraints>
                             </view>
@@ -438,6 +451,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="k7R-uZ-nG0"/>
                     <connections>
+                        <outlet property="cameraButton" destination="N3g-2i-LZ4" id="fc7-BP-WKb"/>
                         <outlet property="detailTable" destination="K4s-bV-T3G" id="eyP-y5-rFa"/>
                         <outlet property="headerView" destination="UEF-cT-TEO" id="3hX-NK-wmo"/>
                         <outlet property="nameLabel" destination="xrK-Za-wAe" id="sMx-UJ-J61"/>
@@ -451,6 +465,7 @@
     </scenes>
     <resources>
         <image name="call_button" width="45" height="44"/>
+        <image name="camera_button" width="41" height="41"/>
         <image name="email_button" width="45" height="44"/>
         <image name="favourite_button" width="44" height="44"/>
         <image name="message_button" width="44" height="44"/>

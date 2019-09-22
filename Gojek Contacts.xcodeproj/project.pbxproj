@@ -18,6 +18,7 @@
 		3AB56F9A23372A7400B1C7B4 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB56F9923372A7400B1C7B4 /* DetailCell.swift */; };
 		3AB56F9C2337433F00B1C7B4 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB56F9B2337433F00B1C7B4 /* NewContactViewController.swift */; };
 		3AD92AD72337569E00AD2473 /* DetailEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD92AD62337569E00AD2473 /* DetailEditCell.swift */; };
+		3AD92ADB2337909200AD2473 /* GlobalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD92ADA2337909200AD2473 /* GlobalClass.swift */; };
 		3AE2F7082336028000821559 /* SessionCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2F7072336028000821559 /* SessionCalls.swift */; };
 		3AE2F70A233603E900821559 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2F709233603E900821559 /* APIHelper.swift */; };
 		3AE2F70C2336158700821559 /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2F70B2336158700821559 /* ContactDetail.swift */; };
@@ -25,7 +26,7 @@
 		3AE2F71323362F4D00821559 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2F71223362F4D00821559 /* ContactList.swift */; };
 		3AE2F718233631E300821559 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2F716233631E300821559 /* ContactCell.swift */; };
 		3AE2F719233631E300821559 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE2F717233631E300821559 /* ContactCell.xib */; };
-		3AE2F71A2336802E00821559 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A065CB12335D91F004DEA0D /* ViewController.swift */; };
+		3AE2F71A2336802E00821559 /* TTDClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A065CB12335D91F004DEA0D /* TTDClass.swift */; };
 		3AE2F71C233685AD00821559 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2F71B233685AD00821559 /* ContactDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +34,7 @@
 		3A065CAA2335D91F004DEA0D /* Gojek Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gojek Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A065CAD2335D91F004DEA0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A065CAF2335D91F004DEA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A065CB12335D91F004DEA0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A065CB12335D91F004DEA0D /* TTDClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTDClass.swift; sourceTree = "<group>"; };
 		3A065CB42335D91F004DEA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A065CB62335D921004DEA0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A065CB92335D921004DEA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		3AB56F9923372A7400B1C7B4 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		3AB56F9B2337433F00B1C7B4 /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		3AD92AD62337569E00AD2473 /* DetailEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditCell.swift; sourceTree = "<group>"; };
+		3AD92ADA2337909200AD2473 /* GlobalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalClass.swift; sourceTree = "<group>"; };
 		3AE2F7072336028000821559 /* SessionCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCalls.swift; sourceTree = "<group>"; };
 		3AE2F709233603E900821559 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		3AE2F70B2336158700821559 /* ContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
@@ -90,9 +92,8 @@
 				3A065CC92335FA14004DEA0D /* Extensions */,
 				3A065CC42335E530004DEA0D /* SessionClass */,
 				3A065CC32335E460004DEA0D /* Models */,
-				3A065CAD2335D91F004DEA0D /* AppDelegate.swift */,
-				3A065CAF2335D91F004DEA0D /* SceneDelegate.swift */,
-				3A065CB12335D91F004DEA0D /* ViewController.swift */,
+				3AD92AD923378B2A00AD2473 /* StartUP */,
+				3AD92AD823378B1400AD2473 /* TTD */,
 				3A065CB32335D91F004DEA0D /* Main.storyboard */,
 				3A065CB62335D921004DEA0D /* Assets.xcassets */,
 				3A065CB82335D921004DEA0D /* LaunchScreen.storyboard */,
@@ -144,6 +145,24 @@
 				3AD92AD62337569E00AD2473 /* DetailEditCell.swift */,
 			);
 			path = detailcell;
+			sourceTree = "<group>";
+		};
+		3AD92AD823378B1400AD2473 /* TTD */ = {
+			isa = PBXGroup;
+			children = (
+				3A065CB12335D91F004DEA0D /* TTDClass.swift */,
+			);
+			name = TTD;
+			sourceTree = "<group>";
+		};
+		3AD92AD923378B2A00AD2473 /* StartUP */ = {
+			isa = PBXGroup;
+			children = (
+				3A065CAD2335D91F004DEA0D /* AppDelegate.swift */,
+				3A065CAF2335D91F004DEA0D /* SceneDelegate.swift */,
+				3AD92ADA2337909200AD2473 /* GlobalClass.swift */,
+			);
+			path = StartUP;
 			sourceTree = "<group>";
 		};
 		3AE2F70D23362AE800821559 /* Controllers */ = {
@@ -260,7 +279,8 @@
 				3AE2F71323362F4D00821559 /* ContactList.swift in Sources */,
 				3AE2F7082336028000821559 /* SessionCalls.swift in Sources */,
 				3AE2F70C2336158700821559 /* ContactDetail.swift in Sources */,
-				3AE2F71A2336802E00821559 /* ViewController.swift in Sources */,
+				3AE2F71A2336802E00821559 /* TTDClass.swift in Sources */,
+				3AD92ADB2337909200AD2473 /* GlobalClass.swift in Sources */,
 				3AD92AD72337569E00AD2473 /* DetailEditCell.swift in Sources */,
 				3AE2F70A233603E900821559 /* APIHelper.swift in Sources */,
 				3AE2F71C233685AD00821559 /* ContactDetailViewController.swift in Sources */,

@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        /*API.shared.getDetails(with: SessionAPIRequest.FetchContactDetail(id: "11081")) { (details, err) in
+        API.shared.getDetails(with: SessionAPIRequest.FetchContactDetail(id: "11088")) { (contactDetail, err) in
+            print(contactDetail)
         }
         
         API.shared.deleteContact(with: SessionAPIRequest.DeleteContact(id: "11081")) { (str, val) in
@@ -22,14 +23,7 @@ class ViewController: UIViewController {
                 print(str,val)
             }
          
-         {
-           "first_name": "Amitabh",
-           "last_name": "Bachchan",
-           "email": "ab@bachchan.com",
-           "phone_number": "+919980123412",
-           "favorite": false
-         }
-        }*/
+        }
         
         var dict = Dictionary<String, Any>()
         dict["first_name"] = "Vishwas"

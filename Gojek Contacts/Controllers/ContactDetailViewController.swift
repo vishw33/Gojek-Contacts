@@ -16,8 +16,6 @@ class ContactDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var contactId:String = ""
     var detailModel:DetailContact?
-    var baseMissingURl = "https://gojek-contacts-app.herokuapp.com/images/missing.png"
-    let placeHolderImg = UIImage(named: "placeholder_photo")
     
     let activity = UIActivityIndicatorView(style: .large)
     
