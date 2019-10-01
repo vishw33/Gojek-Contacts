@@ -85,6 +85,10 @@ class ContactsViewController: UIViewController {
     func otherguyFunc(){
         //something
     }
+    
+    func otherguyFunc2(){
+         //something
+     }
 }
 
 extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
