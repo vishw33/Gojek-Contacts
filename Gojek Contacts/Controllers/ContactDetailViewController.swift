@@ -19,6 +19,8 @@ class ContactDetailViewController: UIViewController {
     
     let activity = UIActivityIndicatorView(style: .large)
     
+    var detail = 10
+    
     var infoArray = ["Mobile" , "email"]
     override func viewDidLoad() {
         super.viewDidLoad()
