@@ -81,6 +81,10 @@ class ContactsViewController: UIViewController {
         
         keysSorted = groupedContacts.keys.sorted()
     }
+    
+    func otherguyFunc(){
+        //something
+    }
 }
 
 extension ContactsViewController:UITableViewDelegate,UITableViewDataSource {
